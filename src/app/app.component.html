@@ -1,0 +1,8 @@
+<div class="dropdown" (click)="toggleDropdown()">
+  <button class="dropdown-toggle" [ngClass]="{defaultColor: selectedValue === 'Select an Option'}">{{selectedValue}}
+    <span class="caret" [ngClass]="{caretDown: isOpen }"></span>
+  </button>
+  <ul class="dropdown-menu" *ngIf="isOpen">
+    <li *ngFor="let option of optionList" (click)="onSelection(option)">{{option}}</li>
+  </ul>
+</div>  
